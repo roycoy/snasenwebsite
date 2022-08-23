@@ -1,0 +1,76 @@
+body {
+    margin-left: 20px;
+}
+.card{
+    width: 500px;
+    background-color: lightgrey;
+    border: 1px solid darkgray;
+    margin: 10px;
+}
+.innercard{
+    padding: 10px;
+}
+
+.header{  
+    color: white;        
+    padding: 1% 0;
+    border: 1px solid grey ;
+    text-align: center;
+    font-size:large;
+    user-select: none;
+}
+
+
+
+
+div-1 { background-color: #7fdea7; 
+        color: blue;        
+        padding: 6px;
+        border: dashed 4px green;
+        margin: 6px;
+        text-align: center;
+        font-size: 150%;
+}
+div-0 { background-color: #7fdea7; 
+    color: rgb(255, 0, 43);        
+    padding: 6px;
+    border: dashed 4px green;
+    margin: 6px;
+    text-align: center;
+    font-size: 120%;
+}
+.green { background-color: rgb(50, 207, 58); 
+    }
+div.blue { background-color: rgb(61, 50, 207); 
+    color: white;        
+    padding: 4px;
+    border: 2px solid grey ;
+    margin: 2px;
+    text-align: center;
+    font-size: 120%;
+}
+div.red { background-color: rgb(207, 50, 50); 
+    color: white;        
+    padding: 4px;
+    border: 2px solid grey ;
+    margin: 2px;
+    text-align: center;
+    font-size: 120%;
+}
+div.orange { background-color: orange; 
+    color: white;        
+    padding: 4px;
+    border: 2px solid grey ;
+    margin: 2px;
+    text-align: center;
+    font-size: 120%;
+}
+div.black { background-color: rgb(13, 12, 29); 
+    color: white;        
+    padding: 4px;
+    border: 2px solid grey ;
+    margin: 2px;
+    text-align: center;
+    font-size: 120%;
+}
+
