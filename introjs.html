@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introJS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        div.color1 {
+            background-color: rgb(74, 50, 182);
+
+        }
+
+        div.color2 {
+            background-color: red;
+        }
+
+        div.card {
+            background-color: lightgray;
+            width: 500px;
+            margin: 10px;
+        }
+
+        div.header {
+            font-size: 150%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Intro JavaScript</h3>
+    <ol>
+        <li>finne tag</li>
+        <li>endre html </li>
+        <li>trekke ut som funksjon</li>
+        <li>kalle andre funksjoner</li>
+    </ol>
+    <h3>Så bruker vi JavaScript til dette:</h3>
+    <ol>
+        <li>Åpne og lukke</li>
+        <li>Velge hode</li>
+    </ol>
+    <div class="card">
+        <div class="header color1" onclick="show1()">Overskrift 1</div>
+        <div id="RoysTag1"></div>
+    </div>
+    <div class="card">
+        <div class="header color2" onclick="show2()">Overskrift 2</div>
+        <div id="RoysTag2"></div>
+    </div>
+
+
+    <h3>Bytt hode </h3>
+    <div style="display:flex;" id="numberandbuttons">
+
+
+    </div>
+
+
+    <script>
+        shownumber1();
+
+        shownumber1();
+        function shownumber1() {
+            document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+
+            <button onclick="shownumber4()">
+            ◀
+        </button>
+        <div>
+            <img src="img/head1.png"/>
+        </div>
+        <button onclick="shownumber2()"> ▶ </button>
+        `;
+        }
+
+        function shownumber2() {
+            document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+
+            <button onclick="shownumber1()">
+            ◀
+        </button>
+        <div>
+            <img src="img/head2.png"/>
+        </div>
+        <button onclick="shownumber3()">
+            ▶
+        </button>
+        `;
+        }
+
+        function shownumber3() {
+            document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+
+            <button onclick="shownumber2()">
+            ◀
+        </button>
+        <div>
+            <img src="img/head3.png"/>
+        </div>
+        <button onclick="shownumber4()">
+            ▶
+        </button>
+        `;
+        }
+        function shownumber4() {
+            document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+
+            <button onclick="shownumber3()">
+            ◀
+        </button>
+        <div>
+            <img src="img/head4.png"/>
+        </div>
+        <button onclick="shownumber1()">
+            ▶
+        </button>
+        `;
+        }
+
+        function show1() { //kommentar
+            blankall();
+            document.getElementById('RoysTag1').innerHTML = /*HTML*/`
+        <h3>show1</h3>
+    <ol>
+         <li>kalle andre funksjoner</li>
+    </ol>
+    <h3>Så bruker vi JavaScript til dette:</h3>
+    <ol>
+        <li>Velge hode</li>
+    </ol>
+    `;
+        }
+
+        function show2() { //kommentar
+            blankall();
+            document.getElementById('RoysTag2').innerHTML = /*HTML*/`
+        <h3>show2</h3>
+    <ol>
+         <li>kalle show2</li>
+    </ol>
+    <h3>Så bruker vi JavaScript til dette:</h3>
+    <ol>
+        <li>Velge hode</li>
+    </ol>
+    `;
+        }
+
+        function blankall() { //kommentar
+            document.getElementById('RoysTag1').innerHTML = '';
+            document.getElementById('RoysTag2').innerHTML = '';
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
