@@ -122,17 +122,17 @@
     <h3>Bytt hode </h3>
     <div style="display:flex;" id="numberandbuttons">
 
-        
-<script>
-    <div class="card">
-selectHead1();
-selectHead1();
-</div>
-selectBody1();
-selectBody1();
 
-function selectHead1() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+        <script>
+            <div class="card">
+                selectHead1();
+                selectHead1();
+            </div>
+            selectBody1();
+            selectBody1();
+
+            function selectHead1() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
     <button onclick="selectHead4()">
     ◀
 </button>
@@ -141,10 +141,10 @@ function selectHead1() {
 </div>
 <button onclick="selectHead2()"> ▶ </button>
 `;
-}
+            }
 
-function selectHead2() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            function selectHead2() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
     <button onclick="selectHead1()">
     ◀
 </button>
@@ -155,10 +155,10 @@ function selectHead2() {
     ▶
 </button>
 `;
-}
+            }
 
-function selectHead3() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            function selectHead3() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
 
     <button onclick="selectHead2()"> ◀</button>
 <div>
@@ -166,9 +166,9 @@ function selectHead3() {
 </div>
 <button onclick="selectHead4()"> ▶ </button>
 `;
-}
-function selectHead4() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            }
+            function selectHead4() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
 
     <button onclick="selectHead3()">
     ◀
@@ -180,11 +180,11 @@ function selectHead4() {
     ▶
 </button>
 `;
-}
+            }
 
 
-function selectBody1() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            function selectBody1() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
     <button onclick="selectBody4()">
     ◀
 </button>
@@ -193,10 +193,10 @@ function selectBody1() {
 </div>
 <button onclick="selectBody2()"> ▶ </button>
 `;
-}
+            }
 
-function selectBody2() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            function selectBody2() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
     <button onclick="selectBody1()">
     ◀
 </button>
@@ -207,10 +207,10 @@ function selectBody2() {
     ▶
 </button>
 `;
-}
+            }
 
-function selectBody3() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            function selectBody3() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
 
     <button onclick="selectBody2()"> ◀</button>
 <div>
@@ -218,9 +218,9 @@ function selectBody3() {
 </div>
 <button onclick="selectBody4()"> ▶ </button>
 `;
-}
-function selectBody4() {
-    document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
+            }
+            function selectBody4() {
+                document.getElementById('numberandbuttons').innerHTML = /*HTML*/`
 
     <button onclick="selectBody3()">
     ◀
@@ -232,9 +232,9 @@ function selectBody4() {
     ▶
 </button>
 `;
-}
+            }
 
-</script>
+        </script>
 </body>
 
 </html>

@@ -1,0 +1,122 @@
+<!--
+    - Funksjoner med parametre og returvedi
+    - Top-down og bottom-up refactoring
+
+    DRY
+    Don't Repeat Yourself
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 100px);
+            grid-template-rows: repeat(8, 100px);
+        }
+
+        .whiteBrikke {
+            color: white;
+            text-shadow: 1px 1px gray;
+        }
+
+        .blackBrikke {
+            color: black;
+        }
+
+        .lightRute,
+        .darkRute {
+            font-size: 450%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .lightRute {
+            background-color: rgb(240, 217, 181);
+        }
+
+        .darkRute {
+            background-color: rgb(181, 136, 99);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board">
+    </div>
+    <script>
+        showBoard();
+        function showBoard() {
+            document.getElementById('board').innerHTML =
+                BrikkesRow('light', 'dark', 'black')
+                + pawnRow('dark', 'light', 'black')
+                + blankRowStartingWithLight()
+                + blankRowStartingWithDark()
+                + blankRowStartingWithLight()
+                + blankRowStartingWithDark()
+                + pawnRow('light', 'dark', 'white')
+                + BrikkesRow('dark', 'light', 'white')
+                ;
+        }
+
+        function BrikkesRow(css1, css2, BrikkeColor) {
+            return /*HTML*/`
+                <div class="${css1}Rute ${BrikkeColor}Brikke">♜</div>
+                <div class="${css2}Rute ${BrikkeColor}Brikke">♞</div>
+                <div class="${css1}Rute ${BrikkeColor}Brikke">♝</div>
+                <div class="${css2}Rute ${BrikkeColor}Brikke">♛</div>
+                <div class="${css1}Rute ${BrikkeColor}Brikke">♚</div>
+                <div class="${css2}Rute ${BrikkeColor}Brikke">♝</div>
+                <div class="${css1}Rute ${BrikkeColor}Brikke">♞</div>
+                <div class="${css2}Rute ${BrikkeColor}Brikke">♜</div>               
+            `;
+        }
+
+        function pawnRow(css1, css2, pawnColor) {
+            return /*HTML*/`            
+                <div class="${css1}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css2}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css1}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css2}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css1}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css2}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css1}Rute ${pawnColor}Brikke">♟</div>
+                <div class="${css2}Rute ${pawnColor}Brikke">♟</div>            
+            `;
+        }
+
+        function blankRowStartingWithLight() {
+            return blankRow('light', 'dark');
+        }
+
+        function blankRowStartingWithDark() {
+            return blankRow('dark', 'light');
+        }
+
+        function blankRow(css1, css2) {
+            return createBlankRute(css1)
+                + createBlankRute(css2)
+                + createBlankRute(css1)
+                + createBlankRute(css2)
+                + createBlankRute(css1)
+                + createBlankRute(css2)
+                + createBlankRute(css1)
+                + createBlankRute(css2);
+        }
+
+        function createBlankRute(css) {
+            return createRute(css, '');
+        }
+
+        function createRute(css, content) {
+            return /*HTML*/`<div class="${css}Rute">${content}</div>`;
+        }
+    </script>
+</body>
+
+</html>
